@@ -3,7 +3,8 @@
 	y lo muestro por 'getElementById' al presionar el botón 'MOSTRAR'
 */
 function Mostar()
-{
-	
+{var dato;
+	dato=prompt("hola");
+	document.getElementById("elNombre").value = dato;
 }
 
