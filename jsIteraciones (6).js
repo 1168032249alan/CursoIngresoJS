@@ -8,12 +8,6 @@ function Mostrar()
 		contador++;
 		numero=prompt("numero");
 		numero=parseInt(numero);
-	
-		while (isNaN(numero))
-		{
-			numero=prompt("numero");
-			numero=parseInt(numero);
-		}
 		acumulador=acumulador+numero;
 	}
 

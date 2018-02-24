@@ -5,23 +5,21 @@ function Mostrar()
 	var acumulador=0;
 	var respuesta='si';
 
-	while(true)
+	while(respuesta=="si")
 	{
-		
-		numero=prompt("numero");
-		if(numero==null)
-		{
-			break;
-		}
-		contador++;
+		numero=prompt("ingrese numero");
 		numero=parseInt(numero);
-		if(isNaN(numero));
-		{
-			break;
-		}		
-		acumulador=acumulador+numero
-	}
 
+		while(numero<1 || numero>10)
+		{
+			numero=prompt("reingrese un numero");
+			numero=parseInt(numero);
+		}
+			acumulador=acumulador + numero;
+		
+			respuesta=prompt("desea ingresar otro numero? si/no" );
+	}
+		
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;

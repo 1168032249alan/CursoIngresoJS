@@ -1,16 +1,16 @@
 function Mostrar()
 {
-	var numero;
-	numero=prompt("ingrese un un numero entre el 0 y 9");
 
-	
-	while(numero<0 || numero>9)
-	{		
-		
+	var numero = prompt("ingrese un número entre 0 y 10.");
+	numero=parseInt(numero);
+
+	while(isNaN(numero) ||  numero<0 || numero>9)
+	{
+		numero=prompt("reingrese un numero entre 0 y 9");
+		numero=parseInt(numero);
 	}
-		alert("el numero que ingresaste no esta entre el 0 y 9");
 
-	
+		alert("Bienvenido");
 
 
 }//FIN DE LA FUNCIÓN

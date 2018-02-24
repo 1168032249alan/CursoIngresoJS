@@ -2,20 +2,13 @@ function Mostrar()
 {
 
     var sexo; 
-    sexo = prompt("ingrese f ó m .");
+    sexo= prompt("ingrese f ó m .");
 
-    while((sexo!=`f`&& sexo !="m") && sexo !=null)
+    while(sexo != "f" && sexo!="m" )
     {
-        if(sexo==null)
-        {
-            break
-
-        }
-        sexo=prompt("intente nuevamente");       
+        sexo=prompt("ingrese su sexo plis");
     }
-
-
-
+        
 document.getElementById('Sexo').value=sexo;
 
 }//FIN DE LA FUNCIÓN
