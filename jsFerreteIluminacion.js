@@ -17,42 +17,75 @@ function CalcularPrecio ()
     var porcentaje;
     var precioBruto;
     var descuento;
+    var IIBB;
+    var precioIIBB;
+    var precioFinalConDescuento;
     cantidad=document.getElementById("Cantidad").value;
     marca=document.getElementById("Marca").value;
     precioBruto=cantidad*precio;
     porcentaje=0;
-
-    if(cantidad>5)
-    {
-        
-        porcentaje=0.5
-    {
-        if(cantidad==5)
-        {
-            if(marca=="ArgentinaLuz")
-            {
-                porcentaje=0.6
-
-            }else(cantidad==5)
-            {
-                porcentaje=0.7
-
-            }if
-            
-            {
-                 
-            }
-            
-
-            
-        
-          
     
-    
-
+    if(cantidad>=6)
+    {
+        porcentaje=0.5;
     }
+    else
+    {
+        if(cantidad==5 && marca=="ArgentinaLuz")        
+        {    
+            porcentaje=0.4;   
+        }else
+        {
+            if(cantidad==5 && marca !="ArgentinaLuz")
+            {
+                porcentaje=0.3;                   
+            }
+            else
+            {
+                if(cantidad==4 && marca=="ArgentinaLuz" || marca=="FelipeLamparas")
+                {
+                    porcentaje=0.25;
+                }else
+                {
+                    if(cantidad==4 && marca!="ArgentinaLuz" || marca!="FelipeLamparas")
+                    {
+                        porcentaje=0.20;
+                    }else
+                    {
+                        if(cantidad==3 && marca=="ArgentinaLuz")
+                        {
+                            porcentaje=0.15;
+                        }else
+                        {
+                            if(cantidad==3 && marca=="FelipeLamparas")
+                            {
+                                porcentaje=0.10;
+                            }else
+                            {
+                                if(cantidad==3 && marca!="ArgentinaLuz" || marca!="FelipeLamparas")
+                                {
+                                    porcentaje=0.5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }     
+    }
+    if(precioFinalConDescuento>120)
+    {
+        IIBB=precioFinalConDescuento*0.1;
+        precioIIBB=precioFinalConDescuento+IIBB;
 
-
-
- 	
+        alert("importe a pagar es $" + precioIIBB + " usted pago $" + IIBB + " de ingresos brutos");
+    }
+    else
+    {
+        alert(precioFinalConDescuento);
+    }
+        descuento = precioBruto * porcentaje;
+        precioFinal = precioBruto - descuento
+   
+           document.getElementById("precioDescuento").value=precioFinal
 }
